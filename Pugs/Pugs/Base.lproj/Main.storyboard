@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jxq-Qt-hbh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pugs-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="PugsViewController" title="Pugs" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="PugsViewController" customModule="Pugs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AT4-Is-ako">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gtr-5o-Tcw">
+                                    <size key="itemSize" width="232" height="294"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PugCell" id="Muj-S6-jbf" customClass="PugCell" customModule="Pugs" customModuleProvider="target">
+                                        <rect key="frame" x="71.5" y="0.0" width="232" height="294"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="232" height="294"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t78-Db-QLx">
+                                                    <rect key="frame" x="4" y="4" width="224" height="225"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DJ-Xm-8Rn" customClass="LikeButton" customModule="Pugs" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="234" width="192" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="VhK-Rw-WbY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                    <state key="normal" title="♡"/>
+                                                    <connections>
+                                                        <action selector="onLikeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vsx-dL-gq0"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xa4-UN-NA3">
+                                                    <rect key="frame" x="20" y="271.5" width="192" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="t78-Db-QLx" secondAttribute="trailing" constant="4" id="58e-qs-nOq"/>
+                                            <constraint firstAttribute="bottom" secondItem="t78-Db-QLx" secondAttribute="bottom" constant="65" id="5m0-Hw-BEx"/>
+                                            <constraint firstAttribute="bottom" secondItem="0DJ-Xm-8Rn" secondAttribute="bottom" constant="25" id="Nab-El-2wV"/>
+                                            <constraint firstItem="t78-Db-QLx" firstAttribute="top" secondItem="Muj-S6-jbf" secondAttribute="top" constant="4" id="PWr-lh-YON"/>
+                                            <constraint firstAttribute="bottom" secondItem="Xa4-UN-NA3" secondAttribute="bottom" constant="2" id="R3U-e3-Y6F"/>
+                                            <constraint firstAttribute="trailing" secondItem="Xa4-UN-NA3" secondAttribute="trailing" constant="20" id="TDM-7H-jZw"/>
+                                            <constraint firstItem="Xa4-UN-NA3" firstAttribute="leading" secondItem="Muj-S6-jbf" secondAttribute="leading" constant="20" id="cNY-sA-9Vc"/>
+                                            <constraint firstAttribute="trailing" secondItem="0DJ-Xm-8Rn" secondAttribute="trailing" constant="20" id="nz3-tc-hch"/>
+                                            <constraint firstItem="0DJ-Xm-8Rn" firstAttribute="leading" secondItem="Muj-S6-jbf" secondAttribute="leading" constant="20" id="pvQ-02-ARY"/>
+                                            <constraint firstItem="t78-Db-QLx" firstAttribute="leading" secondItem="Muj-S6-jbf" secondAttribute="leading" constant="4" id="wB5-Yq-qcM"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="t78-Db-QLx" id="fwz-Ag-ENx"/>
+                                            <outlet property="likeButton" destination="0DJ-Xm-8Rn" id="fcF-Fb-vHJ"/>
+                                            <outlet property="totalLikes" destination="Xa4-UN-NA3" id="YGK-15-iL4"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="xH8-E9-YGO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="g49-Hp-R47"/>
+                                </connections>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="PSI-rj-kUx">
+                                <rect key="frame" x="177.5" y="627" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PSI-rj-kUx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="28y-qQ-rg9"/>
+                            <constraint firstItem="AT4-Is-ako" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="585-lb-Jz6"/>
+                            <constraint firstItem="PSI-rj-kUx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="mB3-5G-ag2"/>
+                            <constraint firstItem="AT4-Is-ako" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nDt-Uj-xqo"/>
+                            <constraint firstItem="AT4-Is-ako" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qYQ-Af-mqH"/>
+                            <constraint firstItem="AT4-Is-ako" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vn7-dd-L4f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pugs" id="DeW-L2-Z0J"/>
+                    <connections>
+                        <outlet property="collectionView" destination="AT4-Is-ako" id="jbX-Nz-J39"/>
+                        <outlet property="flowLayout" destination="Gtr-5o-Tcw" id="G3v-uo-LZL"/>
+                        <outlet property="loadingIndicator" destination="PSI-rj-kUx" id="0Cc-it-Pwv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.8" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jcs-tl-hov">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LWf-CM-3fo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="jxq-Qt-hbh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D4g-AO-byY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kMg-Bb-xXA"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="114" y="-528"/>
+        </scene>
+    </scenes>
+</document>
